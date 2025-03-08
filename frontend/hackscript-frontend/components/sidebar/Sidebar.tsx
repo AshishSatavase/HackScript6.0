@@ -29,7 +29,6 @@ export function MySidebar({ children }: { children: React.ReactNode }) {
             </div>
           </div>
           <div className="mt-8 flex flex-col gap-2">
-            <ThemeToggle />
             <ModeToggle />
             <User />
           </div>
@@ -52,7 +51,7 @@ export const Logo = () => {
         animate={{ opacity: 1 }}
         className="font-medium text-black dark:text-white whitespace-pre"
       >
-        Code Militia
+        QA Bot
       </motion.span>
     </Link>
   );
