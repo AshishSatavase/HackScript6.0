@@ -3,8 +3,8 @@ import React from 'react'
 
 function page() {
   return (
-    <div>
-      Analytics
+    <div className='m-0 p-0'>
+  
       <Analytics/>
     </div>
   )

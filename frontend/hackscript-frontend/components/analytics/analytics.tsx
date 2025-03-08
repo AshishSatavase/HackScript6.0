@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { useState, useEffect, useRef } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
@@ -22,8 +24,9 @@ import {
   XAxis,
   YAxis,
 } from "recharts"
-import { Pause, Play, Upload, Volume2 } from "lucide-react"
+import { Pause, Play, Upload, Volume2 } from 'lucide-react'
 import { Slider } from "@/components/ui/slider"
+import { TranscriptionLogs } from "@/components/analytics/transcription-logs"
 
 // Full conversation data (4min 45sec = 285 seconds, with data points every 5 seconds = 57 data points)
 const fullConversationData = Array.from({ length: 57 }, (_, i) => {
@@ -35,7 +38,12 @@ const fullConversationData = Array.from({ length: 57 }, (_, i) => {
   // Generate realistic-looking sentiment data that fluctuates
   const baseSentiment = Math.sin(i * 0.2) * 0.5
   const randomFactor = (Math.random() - 0.5) * 0.3
-  const sentiment = Math.max(Math.min(baseSentiment + randomFactor, 1), -1)
+  const customerSentiment = Math.max(Math.min(baseSentiment + randomFactor, 1), -1)
+
+  // Generate bot sentiment (slightly different pattern)
+  const botBaseSentiment = Math.sin(i * 0.25) * 0.4 + 0.1
+  const botRandomFactor = (Math.random() - 0.5) * 0.2
+  const botSentiment = Math.max(Math.min(botBaseSentiment + botRandomFactor, 1), -1)
 
   // Generate speaking data (who is speaking at this time)
   const isBotSpeaking = i % 8 >= 4 // Alternate every 20 seconds
@@ -53,7 +61,8 @@ const fullConversationData = Array.from({ length: 57 }, (_, i) => {
   return {
     time: timeLabel,
     timeInSeconds,
-    sentiment,
+    customerSentiment,
+    botSentiment,
     isBotSpeaking,
     speakingEntity: isBotSpeaking ? "Bot" : "Customer",
     botConfidence: confidence,
@@ -71,6 +80,81 @@ const emotionsData = [
   { emotion: "Disgust", customer: 0.25, bot: 0.1 },
   { emotion: "Fear", customer: 0.2, bot: 0.05 },
 ]
+
+// Emotion sequence for demonstration
+const emotionSequence = [
+  { time: 15, emotion: "Neutral", entity: "customer" },
+  { time: 30, emotion: "Joy", entity: "bot" },
+  { time: 45, emotion: "Anger", entity: "customer" },
+  { time: 60, emotion: "Surprise", entity: "bot" },
+  { time: 75, emotion: "Sadness", entity: "customer" },
+  { time: 90, emotion: "Neutral", entity: "bot" },
+  { time: 105, emotion: "Fear", entity: "customer" },
+  { time: 120, emotion: "Joy", entity: "bot" },
+  { time: 135, emotion: "Disgust", entity: "customer" },
+  { time: 150, emotion: "Surprise", entity: "bot" },
+  { time: 165, emotion: "Anger", entity: "customer" },
+  { time: 180, emotion: "Neutral", entity: "bot" },
+  { time: 195, emotion: "Joy", entity: "customer" },
+  { time: 210, emotion: "Sadness", entity: "bot" },
+  { time: 225, emotion: "Neutral", entity: "customer" },
+  { time: 240, emotion: "Joy", entity: "bot" },
+  { time: 255, emotion: "Surprise", entity: "customer" },
+  { time: 270, emotion: "Neutral", entity: "bot" },
+]
+
+const transcriptionData = [
+  {
+    timestamp: "00:00",
+    speaker: "bot",
+    text: "Hello! How can I assist you today?",
+  },
+  {
+    timestamp: "00:03",
+    speaker: "customer",
+    text: "Hi, I'm having trouble with my internet connection.",
+  },
+  {
+    timestamp: "00:07",
+    speaker: "bot",
+    text: "I'm sorry to hear that. Let me help you troubleshoot. First, could you tell me if your router is powered on?",
+  },
+  {
+    timestamp: "00:12",
+    speaker: "customer",
+    text: "Yes, the router is on and all the lights are normal.",
+  },
+  {
+    timestamp: "00:15",
+    speaker: "bot",
+    text: "Great. Have you tried restarting your router in the last 24 hours?",
+  },
+  {
+    timestamp: "00:19",
+    speaker: "customer",
+    text: "No, I haven't tried that yet.",
+  },
+  {
+    timestamp: "00:22",
+    speaker: "bot",
+    text: "Okay, let's try that first. Please unplug your router, wait for 30 seconds, and then plug it back in.",
+  },
+  {
+    timestamp: "00:28",
+    speaker: "customer",
+    text: "Alright, I'll do that now.",
+  },
+  {
+    timestamp: "00:45",
+    speaker: "customer",
+    text: "Ok, I've restarted the router and waited for it to boot up.",
+  },
+  {
+    timestamp: "00:49",
+    speaker: "bot",
+    text: "Perfect. Please check if your internet connection is working now.",
+  },
+] as const
 
 // Calculate talk time from the conversation data
 const calculateTalkTime = (data) => {
@@ -114,7 +198,7 @@ const AudioWaveform = ({ currentTime, duration, isInitial = false }) => {
 
   if (isInitial) {
     return (
-      <div className="flex items-center justify-center h-40 border-2 border-dashed border-colorTwo/50 rounded-lg">
+      <div className="flex items-center justify-center h-40 border-2 border-dashed border-white rounded-lg">
         <div className="text-center">
           <Upload className="w-12 h-12 mx-auto mb-4 text-colorTwo" />
           <p className="font-mono text-lg text-white">Upload Voice Note for analysis</p>
@@ -140,13 +224,17 @@ const AudioWaveform = ({ currentTime, duration, isInitial = false }) => {
 export default function VoiceBotAnalytics() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
-  const [playbackRate, setPlaybackRate] = useState(1)
   const [displayedData, setDisplayedData] = useState<typeof fullConversationData>([])
   const [hasFile, setHasFile] = useState(false)
-  const animationRef = useRef<number | null>(null)
+  const [audioFile, setAudioFile] = useState<File | null>(null)
+  const [audioDuration, setAudioDuration] = useState(285) // Default duration
+  const [customerEmotions, setCustomerEmotions] = useState<Record<string, number>>({})
+  const [botEmotions, setBotEmotions] = useState<Record<string, number>>({})
+  const [displayedTranscriptions, setDisplayedTranscriptions] = useState<typeof transcriptionData>([])
 
-  // Total duration in seconds
-  const duration = 285 // 4min 45sec
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+  const fileInputRef = useRef<HTMLInputElement>(null)
+  const animationRef = useRef<number | null>(null)
 
   // Format time for display
   const formatTime = (seconds: number) => {
@@ -158,65 +246,126 @@ export default function VoiceBotAnalytics() {
   // Handle play/pause
   const togglePlayback = () => {
     if (!hasFile) return
+
+    if (isPlaying) {
+      audioRef.current?.pause()
+    } else {
+      audioRef.current?.play()
+    }
+
     setIsPlaying(!isPlaying)
   }
 
-  // Handle file upload
-  const handleFileUpload = () => {
+  // Handle file upload click
+  const handleUploadClick = () => {
+    fileInputRef.current?.click()
+  }
+
+  // Handle file selection
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files
+    if (!files || files.length === 0) return
+
+    const file = files[0]
+    setAudioFile(file)
+
+    const formData = new FormData();
+    formData.append("file", file);
+    try {
+      const response = await fetch("http://127.0.0.1:8000/upload-audio", {
+        method: "POST",
+        body: formData,
+      })
+  
+      if (!response.ok) {
+        throw new Error("Failed to upload file")
+      }
+  
+      const result = await response.json()
+      console.log("Upload successful:", result)
+    } catch (error) {
+      console.error("Error uploading file:", error)
+    }
+  
+    
+
+    // Create audio element to get duration
+    const audio = new Audio(URL.createObjectURL(file))
+    audio.addEventListener("loadedmetadata", () => {
+      setAudioDuration(audio.duration)
+      audioRef.current = audio
+
+      // Set up audio events
+      audio.addEventListener("play", () => setIsPlaying(true))
+      audio.addEventListener("pause", () => setIsPlaying(false))
+      audio.addEventListener("ended", () => {
+        setIsPlaying(false)
+        setCurrentTime(audio.duration)
+      })
+      audio.addEventListener("timeupdate", () => {
+        setCurrentTime(audio.currentTime)
+      })
+    })
+
     setHasFile(true)
     setCurrentTime(0)
     setIsPlaying(false)
+    setCustomerEmotions({})
+    setBotEmotions({})
 
     // Reset data when file is uploaded
     setDisplayedData([fullConversationData[0]])
   }
 
-  // Animation effect to gradually add data points
+  // Handle seeking in the audio
+  const handleSeek = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!hasFile || !audioRef.current) return
+
+    const container = e.currentTarget
+    const rect = container.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const percentage = x / rect.width
+    const newTime = percentage * audioDuration
+
+    audioRef.current.currentTime = newTime
+    setCurrentTime(newTime)
+  }
+
+  // Update displayed data based on current time
   useEffect(() => {
     if (!hasFile) return
 
-    // Animation function to add data points
-    const animate = () => {
-      setDisplayedData((prev) => {
-        if (prev.length >= fullConversationData.length) {
-          return prev
-        }
-        return fullConversationData.slice(0, prev.length + 1)
-      })
-    }
+    // Find the appropriate data points to display based on current time
+    const dataIndex = Math.min(Math.floor(currentTime / 5), fullConversationData.length - 1)
 
-    // Start animation with 1 second interval
-    const interval = setInterval(animate, 1000)
+    setDisplayedData(fullConversationData.slice(0, dataIndex + 1))
 
-    // Cleanup
-    return () => clearInterval(interval)
-  }, [hasFile])
+    // Update transcriptions based on current time
+    const currentTimeInSeconds = Math.floor(currentTime)
+    const relevantTranscriptions = transcriptionData.filter(entry => {
+      const [minutes, seconds] = entry.timestamp.split(":").map(Number)
+      return (minutes * 60 + seconds) <= currentTimeInSeconds
+    })
+    setDisplayedTranscriptions(relevantTranscriptions)
 
-  // Update current time when playing
-  useEffect(() => {
-    if (isPlaying) {
-      const startTime = Date.now() - currentTime * 1000
+    // Update emotions based on the emotion sequence
+    const relevantEmotions = emotionSequence.filter((item) => item.time <= currentTime)
 
-      const updateTime = () => {
-        const elapsed = ((Date.now() - startTime) * playbackRate) / 1000
-        if (elapsed >= duration) {
-          setCurrentTime(duration)
-          setIsPlaying(false)
-          return
-        }
+    // Process customer emotions
+    const customerEmotionMap: Record<string, number> = {}
+    const botEmotionMap: Record<string, number> = {}
 
-        setCurrentTime(elapsed)
-        animationRef.current = requestAnimationFrame(updateTime)
+    relevantEmotions.forEach((item) => {
+      if (item.entity === "customer") {
+        customerEmotionMap[item.emotion] = 0.5
+      } else {
+        botEmotionMap[item.emotion] = 0.5
       }
+    })
 
-      animationRef.current = requestAnimationFrame(updateTime)
-      return () => {
-        if (animationRef.current) {
-          cancelAnimationFrame(animationRef.current)
-        }
-      }
-    }
-  }, [isPlaying, playbackRate, currentTime, duration])
+    setCustomerEmotions(customerEmotionMap)
+    setBotEmotions(botEmotionMap)
+  }, [currentTime, hasFile])
 
   // Calculate talk time based on current displayed data
   const talkTimeData = calculateTalkTime(displayedData)
@@ -230,12 +379,13 @@ export default function VoiceBotAnalytics() {
         <Card className="col-span-8 bg-black border-colorTwo">
           <CardHeader className="pb-2">
             <CardTitle>Conversation Recording</CardTitle>
-            <CardDescription>{hasFile ? "4:45 duration" : ""}</CardDescription>
+            <CardDescription>{hasFile ? `${formatTime(audioDuration)} duration` : ""}</CardDescription>
           </CardHeader>
           <CardContent>
             {!hasFile ? (
-              <div onClick={handleFileUpload} className="cursor-pointer">
-                <AudioWaveform currentTime={0} duration={duration} isInitial={true} />
+              <div onClick={handleUploadClick} className="cursor-pointer">
+                <AudioWaveform currentTime={0} duration={audioDuration} isInitial={true} />
+                <input type="file" ref={fileInputRef} className="hidden" accept="audio/*" onChange={handleFileChange} />
               </div>
             ) : (
               <>
@@ -247,28 +397,34 @@ export default function VoiceBotAnalytics() {
                     {isPlaying ? <Pause size={20} /> : <Play size={20} />}
                   </button>
 
-                  <div className="flex-1">
-                    <AudioWaveform currentTime={currentTime} duration={duration} />
+                  <div className="flex-1 cursor-pointer" onClick={handleSeek}>
+                    <AudioWaveform currentTime={currentTime} duration={audioDuration} />
                   </div>
 
                   <div className="text-white font-medium">{formatTime(currentTime)}</div>
-
-                  <div className="bg-gray-800 rounded-full px-3 py-1 text-white font-medium">{playbackRate}x</div>
                 </div>
 
                 <div className="flex items-center gap-2 mt-4">
                   <Volume2 size={18} />
-                  <Slider defaultValue={[80]} max={100} step={1} className="w-32" />
-                  <div className="ml-auto flex gap-2">
-                    {[0.5, 1, 1.5, 2].map((rate) => (
-                      <button
-                        key={rate}
-                        onClick={() => setPlaybackRate(rate)}
-                        className={`px-2 py-1 rounded ${playbackRate === rate ? "bg-colorTwo text-black" : "bg-gray-800"}`}
-                      >
-                        {rate}x
-                      </button>
-                    ))}
+                  <Slider
+                    defaultValue={[80]}
+                    max={100}
+                    step={1}
+                    className="w-32"
+                    onValueChange={(value) => {
+                      if (audioRef.current) {
+                        audioRef.current.volume = value[0] / 100
+                      }
+                    }}
+                  />
+                  <div
+                    className="flex-1 h-2 bg-gray-700 rounded-full overflow-hidden ml-4 cursor-pointer"
+                    onClick={handleSeek}
+                  >
+                    <div
+                      className="h-full bg-colorTwo"
+                      style={{ width: `${(currentTime / audioDuration) * 100}%` }}
+                    ></div>
                   </div>
                 </div>
               </>
@@ -276,7 +432,7 @@ export default function VoiceBotAnalytics() {
           </CardContent>
         </Card>
 
-        {/* Emotions Radar Chart - Top Row, Spans 4 columns */}
+        {/* Emotions Radar Charts - Top Row, Spans 4 columns */}
         <Card className="col-span-4 row-span-2 bg-black border-colorTwo">
           <CardHeader>
             <CardTitle>Emotional Analysis</CardTitle>
@@ -285,7 +441,34 @@ export default function VoiceBotAnalytics() {
           <CardContent>
             <div className="h-[350px]">
               <ResponsiveContainer width="100%" height="100%">
-                <RadarChart outerRadius="70%" data={emotionsData}>
+                <RadarChart
+                  outerRadius="70%"
+                  data={[
+                    { emotion: "Joy", customer: customerEmotions["Joy"] || 0, bot: botEmotions["Joy"] || 0 },
+                    {
+                      emotion: "Neutral",
+                      customer: customerEmotions["Neutral"] || 0,
+                      bot: botEmotions["Neutral"] || 0,
+                    },
+                    {
+                      emotion: "Sadness",
+                      customer: customerEmotions["Sadness"] || 0,
+                      bot: botEmotions["Sadness"] || 0,
+                    },
+                    {
+                      emotion: "Surprise",
+                      customer: customerEmotions["Surprise"] || 0,
+                      bot: botEmotions["Surprise"] || 0,
+                    },
+                    { emotion: "Anger", customer: customerEmotions["Anger"] || 0, bot: botEmotions["Anger"] || 0 },
+                    {
+                      emotion: "Disgust",
+                      customer: customerEmotions["Disgust"] || 0,
+                      bot: botEmotions["Disgust"] || 0,
+                    },
+                    { emotion: "Fear", customer: customerEmotions["Fear"] || 0, bot: botEmotions["Fear"] || 0 },
+                  ]}
+                >
                   <PolarGrid stroke="var(--white-black)" opacity={0.2} />
                   <PolarAngleAxis dataKey="emotion" stroke="#fff" />
                   <Radar
@@ -326,13 +509,23 @@ export default function VoiceBotAnalytics() {
                   <ReferenceLine y={0} stroke="#fff" strokeOpacity={0.5} />
                   <Line
                     type="monotone"
-                    dataKey="sentiment"
-                    name="Sentiment"
+                    dataKey="customerSentiment"
+                    name="Customer Sentiment"
+                    stroke="var(--color-one)"
+                    strokeWidth={2}
+                    dot={false}
+                    activeDot={{ r: 6, fill: "var(--color-one)" }}
+                  />
+                  <Line
+                    type="monotone"
+                    dataKey="botSentiment"
+                    name="Bot Sentiment"
                     stroke="var(--color-two)"
                     strokeWidth={2}
                     dot={false}
                     activeDot={{ r: 6, fill: "var(--color-two)" }}
                   />
+                  <Legend />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -496,8 +689,10 @@ export default function VoiceBotAnalytics() {
             </div>
           </CardContent>
         </Card>
+        <Card className="col-span-12 bg-black border-colorTwo">
+          <TranscriptionLogs entries={displayedTranscriptions} isPlaying={isPlaying} />
+        </Card>
       </div>
     </div>
   )
 }
-

@@ -29,7 +29,6 @@ export function MySidebar({ children }: { children: React.ReactNode }) {
             </div>
           </div>
           <div className="mt-8 flex flex-col gap-2">
-            <ModeToggle />
             <User />
           </div>
         </SidebarBody>
