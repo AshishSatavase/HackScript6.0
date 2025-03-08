@@ -2,32 +2,151 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --color-one: rgb(105, 108, 255);
+    --color-one-light: rgb(143, 145, 254);
+    --color-two: rgb(50, 180, 122,1);
+    --color-two-light: rgb(175, 245, 138);
+    --color-three: rgb(255, 62, 29);
+    --color-three-light: rgb(252, 151, 133);
+    --color-four: rgb(255, 171, 0);
+    --color-four-light: rgb(255, 220, 150);
+    --color-five: rgb(3, 195, 236);
+    --color-five-light: rgb(148, 234, 252);
+
+    --color-one-hsl: 238.8, 100%, 70.59%;
+    --color-two-hsl: 99.04, 70.94%, 54.12%;
+    --color-three-hsl: 8.76, 100%, 55.69%;
+    --color-four-hsl: 40.24, 100%, 50%;
+    --color-five-hsl: 190.56, 97.49%, 46.86%;
+
+    --theme: rgb(105, 108, 255);
+    --theme-light: rgb(255, 224, 219);
+
+    --white-black: rgb(0, 0, 0);
+
+    --textbold: rgb(77, 95, 113);
+    --textlight: rgb(179, 187, 195);
+
+    --theme-foreground: #fff;
+    --theme-background: #f5f5f9;
+
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 10%;
+    --input: 0 0% 10%;
+    --ring: 0 0% 100%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --theme-foreground: #232323;  
+    --theme-background: #1c1c1c;  
+    --theme: #fff;
+    --theme-light: rgb(255, 224, 219);
+
+    --white-black: rgb(255, 255, 255);
+
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --textbold: rgb(197, 197, 213);
+    --textlight: rgb(147, 148, 166);
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: black;
+    min-height: 100vh;
+    color: white;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.animate-glow {
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 0px white;
+  }
+  to {
+    box-shadow: 0 0 20px white;
   }
 }
