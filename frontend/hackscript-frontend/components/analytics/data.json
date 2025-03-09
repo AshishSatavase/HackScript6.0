@@ -1,0 +1,1603 @@
+{
+    "context_analysis": [
+      {
+        "Unnamed: 0": 0,
+        "start_time": 1.75,
+        "end_time": 3.91,
+        "speaker": "SPEAKER_01",
+        "text": "How was your online assessment today?",
+        "role": "human1",
+        "sentiment_label": "POSITIVE",
+        "sentiment_score": 0.9949070811271667,
+        "normalized_score": 0.9949070811271667,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      },
+      {
+        "Unnamed: 0": 1,
+        "start_time": 4.72,
+        "end_time": 10.21,
+        "speaker": "SPEAKER_00",
+        "text": "Yeah, it was good. Just now started doing audio recording and stuff. What about you?",
+        "role": "human2",
+        "sentiment_label": "POSITIVE",
+        "sentiment_score": 0.9982783794403076,
+        "normalized_score": 0.9982783794403076,
+        "is_insurance_context": true,
+        "compliance_flag": false
+      },
+      {
+        "Unnamed: 0": 2,
+        "start_time": 11,
+        "end_time": 13.4,
+        "speaker": "SPEAKER_01",
+        "text": "Did you solve all the questions in the online assessment?",
+        "role": "human1",
+        "sentiment_label": "POSITIVE",
+        "sentiment_score": 0.9977298378944396,
+        "normalized_score": 0.9977298378944396,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      },
+      {
+        "Unnamed: 0": 3,
+        "start_time": 14.09,
+        "end_time": 16.47,
+        "speaker": "SPEAKER_00",
+        "text": "Um, no, just one.",
+        "role": "human2",
+        "sentiment_label": "NEGATIVE",
+        "sentiment_score": 0.9907891154289246,
+        "normalized_score": -0.9907891154289246,
+        "is_insurance_context": true,
+        "compliance_flag": false
+      },
+      {
+        "Unnamed: 0": 4,
+        "start_time": 17.38,
+        "end_time": 18.21,
+        "speaker": "SPEAKER_01",
+        "text": "That's quite hard.",
+        "role": "human1",
+        "sentiment_label": "NEGATIVE",
+        "sentiment_score": 0.9951700568199158,
+        "normalized_score": -0.9951700568199158,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      },
+      {
+        "Unnamed: 0": 5,
+        "start_time": 19.13,
+        "end_time": 20.31,
+        "speaker": "SPEAKER_01",
+        "text": "can you describe the question?",
+        "role": "human1",
+        "sentiment_label": "NEGATIVE",
+        "sentiment_score": 0.9902598261833192,
+        "normalized_score": -0.9902598261833192,
+        "is_insurance_context": true,
+        "compliance_flag": false
+      },
+      {
+        "Unnamed: 0": 6,
+        "start_time": 21.68,
+        "end_time": 27.47,
+        "speaker": "SPEAKER_00",
+        "text": "Oh, it was a photograph, DP and various other things. You did yours.",
+        "role": "human2",
+        "sentiment_label": "NEGATIVE",
+        "sentiment_score": 0.9926362037658693,
+        "normalized_score": -0.9926362037658693,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      },
+      {
+        "Unnamed: 0": 7,
+        "start_time": 26.54,
+        "end_time": 29.98,
+        "speaker": "SPEAKER_01",
+        "text": "you to do ask the others on whether there are very few topics.",
+        "role": "human1",
+        "sentiment_label": "NEGATIVE",
+        "sentiment_score": 0.9994810223579408,
+        "normalized_score": -0.9994810223579408,
+        "is_insurance_context": true,
+        "compliance_flag": false
+      },
+      {
+        "Unnamed: 0": 8,
+        "start_time": 30.56,
+        "end_time": 34.69,
+        "speaker": "SPEAKER_00",
+        "text": "Yeah, I did, but some said it was very hard. Some said it was very easy.",
+        "role": "human2",
+        "sentiment_label": "POSITIVE",
+        "sentiment_score": 0.9977117776870728,
+        "normalized_score": 0.9977117776870728,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      },
+      {
+        "Unnamed: 0": 9,
+        "start_time": 35.77,
+        "end_time": 36.67,
+        "speaker": "SPEAKER_01",
+        "text": "or that is bad.",
+        "role": "human1",
+        "sentiment_label": "NEGATIVE",
+        "sentiment_score": 0.99823796749115,
+        "normalized_score": -0.99823796749115,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      },
+      {
+        "Unnamed: 0": 10,
+        "start_time": 37.39,
+        "end_time": 38.52,
+        "speaker": "SPEAKER_00",
+        "text": "Thank you. It was bad.",
+        "role": "human2",
+        "sentiment_label": "POSITIVE",
+        "sentiment_score": 0.9972599744796752,
+        "normalized_score": 0.9972599744796752,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      },
+      {
+        "Unnamed: 0": 11,
+        "start_time": 39.11,
+        "end_time": 42.54,
+        "speaker": "SPEAKER_00",
+        "text": "Too bad, what about Kurshara? I don't know.",
+        "role": "human2",
+        "sentiment_label": "NEGATIVE",
+        "sentiment_score": 0.999405026435852,
+        "normalized_score": -0.999405026435852,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      },
+      {
+        "Unnamed: 0": 12,
+        "start_time": 43.97,
+        "end_time": 47.11,
+        "speaker": "SPEAKER_01",
+        "text": "was there a risk of for cheating in the online assessment?",
+        "role": "human1",
+        "sentiment_label": "NEGATIVE",
+        "sentiment_score": 0.9933379888534546,
+        "normalized_score": -0.9933379888534546,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      },
+      {
+        "Unnamed: 0": 13,
+        "start_time": 47.11,
+        "end_time": 52.33,
+        "speaker": "SPEAKER_00",
+        "text": "Yeah very much even the invigilators were doing cheating, who are making others cheat.",
+        "role": "human2",
+        "sentiment_label": "NEGATIVE",
+        "sentiment_score": 0.9925286769866944,
+        "normalized_score": -0.9925286769866944,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      },
+      {
+        "Unnamed: 0": 14,
+        "start_time": 54.05,
+        "end_time": 56.21,
+        "speaker": "SPEAKER_01",
+        "text": "So who do you think will get selected?",
+        "role": "human1",
+        "sentiment_label": "POSITIVE",
+        "sentiment_score": 0.9914577603340148,
+        "normalized_score": 0.9914577603340148,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      },
+      {
+        "Unnamed: 0": 15,
+        "start_time": 57.63,
+        "end_time": 61.81,
+        "speaker": "SPEAKER_01",
+        "text": "would it be the close friends of the TPO or would it be the skilled people?",
+        "role": "human1",
+        "sentiment_label": "POSITIVE",
+        "sentiment_score": 0.9913284182548524,
+        "normalized_score": 0.9913284182548524,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      },
+      {
+        "Unnamed: 0": 16,
+        "start_time": 63.16,
+        "end_time": 67.31,
+        "speaker": "SPEAKER_01",
+        "text": "or do you think it would be friends of the faculty members?",
+        "role": "human1",
+        "sentiment_label": "NEGATIVE",
+        "sentiment_score": 0.9836938977241516,
+        "normalized_score": -0.9836938977241516,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      },
+      {
+        "Unnamed: 0": 17,
+        "start_time": 68.51,
+        "end_time": 72.15,
+        "speaker": "SPEAKER_00",
+        "text": "It might be Vena Savant.",
+        "role": "human2",
+        "sentiment_label": "POSITIVE",
+        "sentiment_score": 0.9844106435775756,
+        "normalized_score": 0.9844106435775756,
+        "is_insurance_context": true,
+        "compliance_flag": null
+      }
+    ],
+    "emotional_analysis": {
+      "per_utterance_analysis": [
+        {
+          "index": 0,
+          "speaker": "SPEAKER_01",
+          "text": "Hi there, I'm Casey from Quick Help Support Team. I appreciate you reaching out. How may I assist you?",
+          "dominant_emotion": "joy",
+          "dominant_score": 0.731741189956665,
+          "anger": 0.005421736743301153,
+          "disgust": 0.0032566366717219353,
+          "fear": 0.002451468724757433,
+          "joy": 0.731741189956665,
+          "neutral": 0.14554856717586517,
+          "sadness": 0.03841809928417206,
+          "surprise": 0.07316237688064575
+        },
+        {
+          "index": 1,
+          "speaker": "SPEAKER_00",
+          "text": "I want to request a refund for my recent purchase.",
+          "dominant_emotion": "sadness",
+          "dominant_score": 0.9203808903694153,
+          "anger": 0.04744327813386917,
+          "disgust": 0.005704586394131184,
+          "fear": 0.008043368346989155,
+          "joy": 0.002002939349040389,
+          "neutral": 0.012603692710399628,
+          "sadness": 0.9203808903694153,
+          "surprise": 0.0038212023209780455
+        },
+        {
+          "index": 2,
+          "speaker": "SPEAKER_01",
+          "text": "I can imagine how inconvenient this situation is. I want to make sure I understand correctly. Are you saying that?",
+          "dominant_emotion": "neutral",
+          "dominant_score": 0.5691326856613159,
+          "anger": 0.09145302325487137,
+          "disgust": 0.14803877472877502,
+          "fear": 0.01099846325814724,
+          "joy": 0.004770458675920963,
+          "neutral": 0.5691326856613159,
+          "sadness": 0.03837147355079651,
+          "surprise": 0.1372351199388504
+        },
+        {
+          "index": 3,
+          "speaker": "SPEAKER_00",
+          "text": "I bought it last week, but it's defective. I have the receipt.",
+          "dominant_emotion": "sadness",
+          "dominant_score": 0.6440755724906921,
+          "anger": 0.05671811103820801,
+          "disgust": 0.07169034332036972,
+          "fear": 0.012234392575919628,
+          "joy": 0.0036386763677001,
+          "neutral": 0.14345437288284302,
+          "sadness": 0.6440755724906921,
+          "surprise": 0.06818850338459015
+        },
+        {
+          "index": 4,
+          "speaker": "SPEAKER_01",
+          "text": "Based on what you've shared. Here are two options we can try. First, offer store credit. Alternatively, check refund eligibility.",
+          "dominant_emotion": "neutral",
+          "dominant_score": 0.9724302291870117,
+          "anger": 0.00676847156137228,
+          "disgust": 0.004442913923412561,
+          "fear": 0.002514805179089308,
+          "joy": 0.002858818043023348,
+          "neutral": 0.9724302291870117,
+          "sadness": 0.004061602987349033,
+          "surprise": 0.0069231316447257996
+        },
+        {
+          "index": 5,
+          "speaker": "SPEAKER_00",
+          "text": "That makes sense. Thank you.",
+          "dominant_emotion": "joy",
+          "dominant_score": 0.5341286659240723,
+          "anger": 0.021063756197690964,
+          "disgust": 0.018353240564465523,
+          "fear": 0.0018557145958766341,
+          "joy": 0.5341286659240723,
+          "neutral": 0.3899766206741333,
+          "sadness": 0.00779502559453249,
+          "surprise": 0.026826955378055573
+        },
+        {
+          "index": 6,
+          "speaker": "SPEAKER_01",
+          "text": "Have I addressed all your concerns or is there something else you'd like to discuss?",
+          "dominant_emotion": "neutral",
+          "dominant_score": 0.921661376953125,
+          "anger": 0.012774619273841381,
+          "disgust": 0.008572045713663101,
+          "fear": 0.012130195274949074,
+          "joy": 0.003743157023563981,
+          "neutral": 0.921661376953125,
+          "sadness": 0.021378837525844574,
+          "surprise": 0.019739754498004913
+        },
+        {
+          "index": 7,
+          "speaker": "SPEAKER_00",
+          "text": "No, that's all. Thank you.",
+          "dominant_emotion": "joy",
+          "dominant_score": 0.5766851305961609,
+          "anger": 0.01882827654480934,
+          "disgust": 0.013148407451808453,
+          "fear": 0.0024367424193769693,
+          "joy": 0.5766851305961609,
+          "neutral": 0.34753432869911194,
+          "sadness": 0.008868723176419735,
+          "surprise": 0.03249850124120712
+        },
+        {
+          "index": 8,
+          "speaker": "SPEAKER_01",
+          "text": "Thank you for contacting Quick Help Support. Have a wonderful day.",
+          "dominant_emotion": "joy",
+          "dominant_score": 0.6989091038703918,
+          "anger": 0.0038461245130747557,
+          "disgust": 0.0014424308901652694,
+          "fear": 0.008378561586141586,
+          "joy": 0.6989091038703918,
+          "neutral": 0.19985266029834747,
+          "sadness": 0.029988937079906464,
+          "surprise": 0.05758213624358177
+        }
+      ],
+      "overall_analysis": {
+        "dominant_emotion": "neutral",
+        "dominant_score": 0.4113549482491281,
+        "emotion_distribution": {
+          "anger": 0.029368599695670936,
+          "disgust": 0.030516597739834752,
+          "fear": 0.006782634662360781,
+          "joy": 0.2842753488673932,
+          "neutral": 0.4113549482491281,
+          "sadness": 0.1903710180065698,
+          "surprise": 0.047330853503404394
+        },
+        "emotional_tone": "Positive",
+        "emotional_intensity": "Medium",
+        "emotional_diversity": "Medium",
+        "num_emotional_shifts": 7
+      },
+      "speaker_emotions": {
+        "SPEAKER_01": {
+          "anger": 0.02405279506929219,
+          "disgust": 0.033150560385547576,
+          "fear": 0.007294698804616928,
+          "joy": 0.28840454551391304,
+          "neutral": 0.5617251038551331,
+          "sadness": 0.026443790085613726,
+          "surprise": 0.05892850384116173,
+          "dominant_emotion": [
+            "neutral",
+            0.5617251038551331
+          ]
+        },
+        "SPEAKER_00": {
+          "anger": 0.03601335547864437,
+          "disgust": 0.02722414443269372,
+          "fear": 0.006142554484540597,
+          "joy": 0.2791138530592434,
+          "neutral": 0.22339225374162197,
+          "sadness": 0.3952800529077649,
+          "surprise": 0.03283379058120772,
+          "dominant_emotion": [
+            "sadness",
+            0.3952800529077649
+          ]
+        }
+      },
+      "emotional_shifts": [
+        {
+          "index": 1,
+          "text": "I want to request a refund for my recent purchase.",
+          "from_emotion": "joy",
+          "to_emotion": "sadness"
+        },
+        {
+          "index": 2,
+          "text": "I can imagine how inconvenient this situation is. I want to make sure I understand correctly. Are you saying that?",
+          "from_emotion": "sadness",
+          "to_emotion": "neutral"
+        },
+        {
+          "index": 3,
+          "text": "I bought it last week, but it's defective. I have the receipt.",
+          "from_emotion": "neutral",
+          "to_emotion": "sadness"
+        },
+        {
+          "index": 4,
+          "text": "Based on what you've shared. Here are two options we can try. First, offer store credit. Alternatively, check refund eligibility.",
+          "from_emotion": "sadness",
+          "to_emotion": "neutral"
+        },
+        {
+          "index": 5,
+          "text": "That makes sense. Thank you.",
+          "from_emotion": "neutral",
+          "to_emotion": "joy"
+        },
+        {
+          "index": 6,
+          "text": "Have I addressed all your concerns or is there something else you'd like to discuss?",
+          "from_emotion": "joy",
+          "to_emotion": "neutral"
+        },
+        {
+          "index": 7,
+          "text": "No, that's all. Thank you.",
+          "from_emotion": "neutral",
+          "to_emotion": "joy"
+        }
+      ],
+      "summary": "The conversation is predominantly neutral with a score of 0.4114. The overall emotional tone is Positive with Medium intensity. There were 7 notable emotional shifts during the conversation. Different speakers showed varying emotional patterns: SPEAKER_01 was primarily neutral, SPEAKER_00 was primarily sadness. "
+    },
+    "sentiment_analysis": {
+      "utterances": [
+        {
+          "index": 0,
+          "speaker": "SPEAKER_01",
+          "role": null,
+          "text": "Hi there, I'm Casey from Quick Help Support Team. I appreciate you reaching out. How may I assist you?",
+          "sentiment_label": "POSITIVE",
+          "sentiment_score": 0.998349666595459,
+          "normalized_score": 0.998349666595459
+        },
+        {
+          "index": 1,
+          "speaker": "SPEAKER_00",
+          "role": null,
+          "text": "I want to request a refund for my recent purchase.",
+          "sentiment_label": "NEGATIVE",
+          "sentiment_score": 0.9994408488273621,
+          "normalized_score": -0.9994408488273621
+        },
+        {
+          "index": 2,
+          "speaker": "SPEAKER_01",
+          "role": null,
+          "text": "I can imagine how inconvenient this situation is. I want to make sure I understand correctly. Are you saying that?",
+          "sentiment_label": "NEGATIVE",
+          "sentiment_score": 0.9906630516052246,
+          "normalized_score": -0.9906630516052246
+        },
+        {
+          "index": 3,
+          "speaker": "SPEAKER_00",
+          "role": null,
+          "text": "I bought it last week, but it's defective. I have the receipt.",
+          "sentiment_label": "NEGATIVE",
+          "sentiment_score": 0.9994451403617859,
+          "normalized_score": -0.9994451403617859
+        },
+        {
+          "index": 4,
+          "speaker": "SPEAKER_01",
+          "role": null,
+          "text": "Based on what you've shared. Here are two options we can try. First, offer store credit. Alternatively, check refund eligibility.",
+          "sentiment_label": "NEGATIVE",
+          "sentiment_score": 0.992464542388916,
+          "normalized_score": -0.992464542388916
+        },
+        {
+          "index": 5,
+          "speaker": "SPEAKER_00",
+          "role": null,
+          "text": "That makes sense. Thank you.",
+          "sentiment_label": "POSITIVE",
+          "sentiment_score": 0.9986415505409241,
+          "normalized_score": 0.9986415505409241
+        },
+        {
+          "index": 6,
+          "speaker": "SPEAKER_01",
+          "role": null,
+          "text": "Have I addressed all your concerns or is there something else you'd like to discuss?",
+          "sentiment_label": "POSITIVE",
+          "sentiment_score": 0.997655987739563,
+          "normalized_score": 0.997655987739563
+        },
+        {
+          "index": 7,
+          "speaker": "SPEAKER_00",
+          "role": null,
+          "text": "No, that's all. Thank you.",
+          "sentiment_label": "POSITIVE",
+          "sentiment_score": 0.9985307455062866,
+          "normalized_score": 0.9985307455062866
+        },
+        {
+          "index": 8,
+          "speaker": "SPEAKER_01",
+          "role": null,
+          "text": "Thank you for contacting Quick Help Support. Have a wonderful day.",
+          "sentiment_label": "POSITIVE",
+          "sentiment_score": 0.9988743662834167,
+          "normalized_score": 0.9988743662834167
+        }
+      ],
+      "conversation_summary": {
+        "total_utterances": 9,
+        "overall_sentiment": 0.11222652594248454,
+        "recent_sentiment": 0.6002476215362549,
+        "cumulative_sentiment": 1.0100387334823608,
+        "trend_direction": "improving"
+      },
+      "speaker_analysis": {
+        "SPEAKER_01": {
+          "utterance_count": 5,
+          "average_sentiment": 0.2023504853248596,
+          "most_positive": 0.9988743662834167,
+          "most_negative": -0.992464542388916,
+          "latest_sentiment": 0.9988743662834167
+        },
+        "SPEAKER_00": {
+          "utterance_count": 4,
+          "average_sentiment": -0.00042842328548431396,
+          "most_positive": 0.9986415505409241,
+          "most_negative": -0.9994451403617859,
+          "latest_sentiment": 0.9985307455062866
+        }
+      }
+    },
+    "tone_analysis": {
+      "file_info": {
+        "filename": "audio1.wav",
+        "duration": 72.55469387755102,
+        "sample_rate": 22050,
+        "channels": 1
+      },
+      "analysis_params": {
+        "segment_length": 1,
+        "num_segments": 72
+      },
+      "overall_results": {
+        "dominant_tone": "Neutral",
+        "tone_distribution": {
+          "Neutral": 72
+        },
+        "average_features": {
+          "mfcc_mean": -10.0426692658387,
+          "chroma_mean": 0.35288406772212255,
+          "spectral_contrast_mean": 23.690579348001634,
+          "spectral_centroid_mean": 1589.112703237115,
+          "spectral_rolloff_mean": 3236.006095192649,
+          "pitch_mean": 1065.9957930859543,
+          "rms_mean": 0.08991525020812535
+        }
+      },
+      "segments": [
+        {
+          "segment_idx": 0,
+          "time_start": 0,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -18.519642899882367,
+            "chroma_mean": 0.4589310244383742,
+            "spectral_contrast_mean": 22.44857312924245,
+            "spectral_centroid_mean": 2042.1844973723755,
+            "spectral_rolloff_mean": 4463.979825106534,
+            "pitch_mean": 1107.5843847866631,
+            "rms_mean": 0.01273167785257101
+          }
+        },
+        {
+          "segment_idx": 1,
+          "time_start": 1,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -11.081422639712654,
+            "chroma_mean": 0.3725338747803139,
+            "spectral_contrast_mean": 23.131825988018548,
+            "spectral_centroid_mean": 1612.0273045958725,
+            "spectral_rolloff_mean": 3550.286865234375,
+            "pitch_mean": 826.5124966617153,
+            "rms_mean": 0.05768343433737755
+          }
+        },
+        {
+          "segment_idx": 2,
+          "time_start": 2,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -8.096184733327798,
+            "chroma_mean": 0.2896494035414281,
+            "spectral_contrast_mean": 24.802855213402072,
+            "spectral_centroid_mean": 1299.5673336700077,
+            "spectral_rolloff_mean": 2628.0295632102275,
+            "pitch_mean": 659.9670628495957,
+            "rms_mean": 0.12188789993524551
+          }
+        },
+        {
+          "segment_idx": 3,
+          "time_start": 3,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -6.7006189370076354,
+            "chroma_mean": 0.2679058649599113,
+            "spectral_contrast_mean": 23.768852096490424,
+            "spectral_centroid_mean": 1407.2749237711575,
+            "spectral_rolloff_mean": 3149.475652521307,
+            "pitch_mean": 694.0962121058011,
+            "rms_mean": 0.10913875699043274
+          }
+        },
+        {
+          "segment_idx": 4,
+          "time_start": 4,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -11.498722280143156,
+            "chroma_mean": 0.3655052842324468,
+            "spectral_contrast_mean": 23.100995613717547,
+            "spectral_centroid_mean": 1983.1406286325605,
+            "spectral_rolloff_mean": 4060.9663529829545,
+            "pitch_mean": 1410.6915839119565,
+            "rms_mean": 0.059168741106987
+          }
+        },
+        {
+          "segment_idx": 5,
+          "time_start": 5,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -12.215506514058854,
+            "chroma_mean": 0.36301313781966815,
+            "spectral_contrast_mean": 23.262654496518305,
+            "spectral_centroid_mean": 1434.2416546567301,
+            "spectral_rolloff_mean": 3229.4910777698865,
+            "pitch_mean": 540.8157701898723,
+            "rms_mean": 0.054498255252838135
+          }
+        },
+        {
+          "segment_idx": 6,
+          "time_start": 6,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -6.208079921934583,
+            "chroma_mean": 0.34969592627571283,
+            "spectral_contrast_mean": 24.91434890239551,
+            "spectral_centroid_mean": 1656.1769162476203,
+            "spectral_rolloff_mean": 2903.3119895241475,
+            "pitch_mean": 1304.3477301659043,
+            "rms_mean": 0.13142326474189758
+          }
+        },
+        {
+          "segment_idx": 7,
+          "time_start": 7,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -6.491674761995586,
+            "chroma_mean": 0.26821909188984394,
+            "spectral_contrast_mean": 25.203589991283355,
+            "spectral_centroid_mean": 936.7979718353938,
+            "spectral_rolloff_mean": 1770.3718705610795,
+            "pitch_mean": 407.41467120956617,
+            "rms_mean": 0.15725094079971313
+          }
+        },
+        {
+          "segment_idx": 8,
+          "time_start": 8,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -8.239427059595355,
+            "chroma_mean": 0.37114338261338103,
+            "spectral_contrast_mean": 24.049505408173303,
+            "spectral_centroid_mean": 1674.0350794218357,
+            "spectral_rolloff_mean": 3081.939697265625,
+            "pitch_mean": 1524.8554321778429,
+            "rms_mean": 0.0906159058213234
+          }
+        },
+        {
+          "segment_idx": 9,
+          "time_start": 9,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -12.334435725496547,
+            "chroma_mean": 0.46866858692366425,
+            "spectral_contrast_mean": 23.156077214171923,
+            "spectral_centroid_mean": 1761.7483264650828,
+            "spectral_rolloff_mean": 3472.7183948863635,
+            "pitch_mean": 1523.815138549216,
+            "rms_mean": 0.07282482087612152
+          }
+        },
+        {
+          "segment_idx": 10,
+          "time_start": 10,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -15.28826960805434,
+            "chroma_mean": 0.5182399170319173,
+            "spectral_contrast_mean": 21.140765945090735,
+            "spectral_centroid_mean": 2100.0224030514005,
+            "spectral_rolloff_mean": 4346.036598899148,
+            "pitch_mean": 1552.1336422436716,
+            "rms_mean": 0.016093356534838676
+          }
+        },
+        {
+          "segment_idx": 11,
+          "time_start": 11,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -7.1897904532184835,
+            "chroma_mean": 0.2907292654801327,
+            "spectral_contrast_mean": 25.736883277998807,
+            "spectral_centroid_mean": 1209.2683502418633,
+            "spectral_rolloff_mean": 2202.2594105113635,
+            "pitch_mean": 884.7324998027404,
+            "rms_mean": 0.17203670740127563
+          }
+        },
+        {
+          "segment_idx": 12,
+          "time_start": 12,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -6.121604229930107,
+            "chroma_mean": 0.2703174872052122,
+            "spectral_contrast_mean": 24.59312639460438,
+            "spectral_centroid_mean": 1284.1613995546422,
+            "spectral_rolloff_mean": 2468.7327991832385,
+            "pitch_mean": 1057.8000544474035,
+            "rms_mean": 0.13478899002075195
+          }
+        },
+        {
+          "segment_idx": 13,
+          "time_start": 13,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -10.85192069564085,
+            "chroma_mean": 0.3350385710375563,
+            "spectral_contrast_mean": 22.56312408531825,
+            "spectral_centroid_mean": 1868.6863779759626,
+            "spectral_rolloff_mean": 4005.6651722301135,
+            "pitch_mean": 1198.2143790825473,
+            "rms_mean": 0.06240866333246231
+          }
+        },
+        {
+          "segment_idx": 14,
+          "time_start": 14,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -7.009640365504285,
+            "chroma_mean": 0.22450527770658465,
+            "spectral_contrast_mean": 25.187170612932658,
+            "spectral_centroid_mean": 1140.698270263836,
+            "spectral_rolloff_mean": 2196.8761097301135,
+            "pitch_mean": 552.3510901636157,
+            "rms_mean": 0.11381194740533829
+          }
+        },
+        {
+          "segment_idx": 15,
+          "time_start": 15,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -11.540952158371693,
+            "chroma_mean": 0.3930141958946352,
+            "spectral_contrast_mean": 23.65623788622759,
+            "spectral_centroid_mean": 2180.62391573995,
+            "spectral_rolloff_mean": 4115.533447265625,
+            "pitch_mean": 1720.8328198203253,
+            "rms_mean": 0.07374128699302673
+          }
+        },
+        {
+          "segment_idx": 16,
+          "time_start": 16,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -13.283422737850618,
+            "chroma_mean": 0.49023487643441915,
+            "spectral_contrast_mean": 22.25727619574964,
+            "spectral_centroid_mean": 2101.266982748148,
+            "spectral_rolloff_mean": 4076.8715598366475,
+            "pitch_mean": 1750.4326373365916,
+            "rms_mean": 0.045604825019836426
+          }
+        },
+        {
+          "segment_idx": 17,
+          "time_start": 17,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -10.638759425572117,
+            "chroma_mean": 0.4288949285706434,
+            "spectral_contrast_mean": 22.68491394609836,
+            "spectral_centroid_mean": 1653.103132372081,
+            "spectral_rolloff_mean": 3409.5869584517045,
+            "pitch_mean": 1380.1582076129046,
+            "rms_mean": 0.06393235176801682
+          }
+        },
+        {
+          "segment_idx": 18,
+          "time_start": 18,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -14.906650563698808,
+            "chroma_mean": 0.4942500887701826,
+            "spectral_contrast_mean": 22.21182142643261,
+            "spectral_centroid_mean": 2077.0749338699566,
+            "spectral_rolloff_mean": 4471.320689808239,
+            "pitch_mean": 1332.5167847055764,
+            "rms_mean": 0.012754484079778194
+          }
+        },
+        {
+          "segment_idx": 19,
+          "time_start": 19,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -7.700925083424421,
+            "chroma_mean": 0.3473215200655371,
+            "spectral_contrast_mean": 23.556645331843704,
+            "spectral_centroid_mean": 1463.9722500630617,
+            "spectral_rolloff_mean": 2815.46630859375,
+            "pitch_mean": 1175.8583858064083,
+            "rms_mean": 0.11836066097021103
+          }
+        },
+        {
+          "segment_idx": 20,
+          "time_start": 20,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -12.756264095076403,
+            "chroma_mean": 0.3907286104176016,
+            "spectral_contrast_mean": 22.450020059772587,
+            "spectral_centroid_mean": 2050.348633703655,
+            "spectral_rolloff_mean": 4348.238858309659,
+            "pitch_mean": 1500.6161244986147,
+            "rms_mean": 0.02165874093770981
+          }
+        },
+        {
+          "segment_idx": 21,
+          "time_start": 21,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -14.658854124319689,
+            "chroma_mean": 0.38394462684009917,
+            "spectral_contrast_mean": 23.609589409505052,
+            "spectral_centroid_mean": 1913.5878975763103,
+            "spectral_rolloff_mean": 3607.5456099076705,
+            "pitch_mean": 1580.0663939556055,
+            "rms_mean": 0.04117003083229065
+          }
+        },
+        {
+          "segment_idx": 22,
+          "time_start": 22,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -6.480141281370983,
+            "chroma_mean": 0.33516946012947224,
+            "spectral_contrast_mean": 24.59869575193131,
+            "spectral_centroid_mean": 1041.825811226263,
+            "spectral_rolloff_mean": 1927.9557661576705,
+            "pitch_mean": 738.8200811515984,
+            "rms_mean": 0.12976889312267303
+          }
+        },
+        {
+          "segment_idx": 23,
+          "time_start": 23,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -10.4958472403584,
+            "chroma_mean": 0.3222669538143443,
+            "spectral_contrast_mean": 23.73820589006442,
+            "spectral_centroid_mean": 1598.6527478925557,
+            "spectral_rolloff_mean": 3693.6784224076705,
+            "pitch_mean": 1291.436738808526,
+            "rms_mean": 0.08223804086446762
+          }
+        },
+        {
+          "segment_idx": 24,
+          "time_start": 24,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -8.155800025572896,
+            "chroma_mean": 0.32285937562838746,
+            "spectral_contrast_mean": 24.843580029099755,
+            "spectral_centroid_mean": 1401.144859288831,
+            "spectral_rolloff_mean": 3059.183016690341,
+            "pitch_mean": 1150.2168036924083,
+            "rms_mean": 0.10209639370441437
+          }
+        },
+        {
+          "segment_idx": 25,
+          "time_start": 25,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -10.665982545311012,
+            "chroma_mean": 0.3426715600744899,
+            "spectral_contrast_mean": 23.989527614150138,
+            "spectral_centroid_mean": 1822.7458406578169,
+            "spectral_rolloff_mean": 3568.1496360085225,
+            "pitch_mean": 1440.6791008584896,
+            "rms_mean": 0.07476085424423218
+          }
+        },
+        {
+          "segment_idx": 26,
+          "time_start": 26,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -5.802917827550188,
+            "chroma_mean": 0.3961157499097368,
+            "spectral_contrast_mean": 23.296605488383612,
+            "spectral_centroid_mean": 1299.119801086012,
+            "spectral_rolloff_mean": 2620.9333939985795,
+            "pitch_mean": 1360.607632674654,
+            "rms_mean": 0.14771436154842377
+          }
+        },
+        {
+          "segment_idx": 27,
+          "time_start": 27,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -11.882592764341362,
+            "chroma_mean": 0.2818363161573982,
+            "spectral_contrast_mean": 25.840604713485273,
+            "spectral_centroid_mean": 1690.5687657635863,
+            "spectral_rolloff_mean": 2952.740478515625,
+            "pitch_mean": 595.3315782531802,
+            "rms_mean": 0.13059142231941223
+          }
+        },
+        {
+          "segment_idx": 28,
+          "time_start": 28,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -10.297429970707965,
+            "chroma_mean": 0.37145140216626354,
+            "spectral_contrast_mean": 22.851925251315397,
+            "spectral_centroid_mean": 1709.046896278744,
+            "spectral_rolloff_mean": 3292.8672096946025,
+            "pitch_mean": 1386.112182994012,
+            "rms_mean": 0.09962146729230881
+          }
+        },
+        {
+          "segment_idx": 29,
+          "time_start": 29,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -9.91016980105606,
+            "chroma_mean": 0.3334377510376255,
+            "spectral_contrast_mean": 24.33269681449846,
+            "spectral_centroid_mean": 1827.1705405507937,
+            "spectral_rolloff_mean": 3313.9110218394885,
+            "pitch_mean": 1417.783484028909,
+            "rms_mean": 0.08626633137464523
+          }
+        },
+        {
+          "segment_idx": 30,
+          "time_start": 30,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -12.096629819289417,
+            "chroma_mean": 0.33964023207473504,
+            "spectral_contrast_mean": 24.519910920982618,
+            "spectral_centroid_mean": 1759.041083885522,
+            "spectral_rolloff_mean": 3856.6456187855115,
+            "pitch_mean": 1252.4764775474212,
+            "rms_mean": 0.06458786129951477
+          }
+        },
+        {
+          "segment_idx": 31,
+          "time_start": 31,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -11.738028477156693,
+            "chroma_mean": 0.38153392211196,
+            "spectral_contrast_mean": 23.105171633448336,
+            "spectral_centroid_mean": 1612.5721982446055,
+            "spectral_rolloff_mean": 3438.705721768466,
+            "pitch_mean": 1082.0074669454082,
+            "rms_mean": 0.066712386906147
+          }
+        },
+        {
+          "segment_idx": 32,
+          "time_start": 32,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -7.754486602712624,
+            "chroma_mean": 0.26692667133678305,
+            "spectral_contrast_mean": 25.693025181286824,
+            "spectral_centroid_mean": 1181.1072090983291,
+            "spectral_rolloff_mean": 2296.4671741832385,
+            "pitch_mean": 983.1389965736647,
+            "rms_mean": 0.13816051185131073
+          }
+        },
+        {
+          "segment_idx": 33,
+          "time_start": 33,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -7.916484717741451,
+            "chroma_mean": 0.32279154185967296,
+            "spectral_contrast_mean": 24.108241110749265,
+            "spectral_centroid_mean": 1430.2289808958326,
+            "spectral_rolloff_mean": 2759.9204323508525,
+            "pitch_mean": 1226.57226889358,
+            "rms_mean": 0.09907817840576172
+          }
+        },
+        {
+          "segment_idx": 34,
+          "time_start": 34,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -10.667714111370953,
+            "chroma_mean": 0.36168096095131896,
+            "spectral_contrast_mean": 23.9295131461543,
+            "spectral_centroid_mean": 1815.4460531692557,
+            "spectral_rolloff_mean": 3732.3403098366475,
+            "pitch_mean": 1683.4398803894064,
+            "rms_mean": 0.0748211219906807
+          }
+        },
+        {
+          "segment_idx": 35,
+          "time_start": 35,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -11.962797420912047,
+            "chroma_mean": 0.47283223525471785,
+            "spectral_contrast_mean": 22.042149096301426,
+            "spectral_centroid_mean": 1978.100843185435,
+            "spectral_rolloff_mean": 3974.344149502841,
+            "pitch_mean": 1358.3290002506917,
+            "rms_mean": 0.050089381635189056
+          }
+        },
+        {
+          "segment_idx": 36,
+          "time_start": 36,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -7.2785408655835315,
+            "chroma_mean": 0.32368158359788146,
+            "spectral_contrast_mean": 22.71456126223648,
+            "spectral_centroid_mean": 1347.207381634647,
+            "spectral_rolloff_mean": 2818.157958984375,
+            "pitch_mean": 955.2223984691866,
+            "rms_mean": 0.10474718362092972
+          }
+        },
+        {
+          "segment_idx": 37,
+          "time_start": 37,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -11.6126490343577,
+            "chroma_mean": 0.3578944653515523,
+            "spectral_contrast_mean": 22.66365246666786,
+            "spectral_centroid_mean": 1555.2796144957194,
+            "spectral_rolloff_mean": 3535.605135830966,
+            "pitch_mean": 985.1495549924625,
+            "rms_mean": 0.05331500992178917
+          }
+        },
+        {
+          "segment_idx": 38,
+          "time_start": 38,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -13.201108564256113,
+            "chroma_mean": 0.37877296548997896,
+            "spectral_contrast_mean": 23.280557860762883,
+            "spectral_centroid_mean": 1587.0403281712252,
+            "spectral_rolloff_mean": 3471.005526455966,
+            "pitch_mean": 904.4171373536926,
+            "rms_mean": 0.06413460522890091
+          }
+        },
+        {
+          "segment_idx": 39,
+          "time_start": 39,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -10.71491637986692,
+            "chroma_mean": 0.3294299350189369,
+            "spectral_contrast_mean": 23.624804118856723,
+            "spectral_centroid_mean": 1473.4705395630644,
+            "spectral_rolloff_mean": 3173.455810546875,
+            "pitch_mean": 974.1612845622941,
+            "rms_mean": 0.09970121085643768
+          }
+        },
+        {
+          "segment_idx": 40,
+          "time_start": 40,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -7.513336733560748,
+            "chroma_mean": 0.36497348597165197,
+            "spectral_contrast_mean": 23.996129285748932,
+            "spectral_centroid_mean": 1320.7992628135657,
+            "spectral_rolloff_mean": 2418.325528231534,
+            "pitch_mean": 1124.4830077129961,
+            "rms_mean": 0.13151364028453827
+          }
+        },
+        {
+          "segment_idx": 41,
+          "time_start": 41,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -9.607917839107527,
+            "chroma_mean": 0.3488430524892141,
+            "spectral_contrast_mean": 22.827209130268045,
+            "spectral_centroid_mean": 1595.6181895186462,
+            "spectral_rolloff_mean": 3394.171142578125,
+            "pitch_mean": 1018.9436031732308,
+            "rms_mean": 0.061388369649648666
+          }
+        },
+        {
+          "segment_idx": 42,
+          "time_start": 42,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -11.359646702490993,
+            "chroma_mean": 0.3678104909863571,
+            "spectral_contrast_mean": 23.20658049116718,
+            "spectral_centroid_mean": 1542.4132630990027,
+            "spectral_rolloff_mean": 3208.447265625,
+            "pitch_mean": 1121.6266003801172,
+            "rms_mean": 0.0548117496073246
+          }
+        },
+        {
+          "segment_idx": 43,
+          "time_start": 43,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -13.212273334333604,
+            "chroma_mean": 0.48431127327340845,
+            "spectral_contrast_mean": 21.899481903579964,
+            "spectral_centroid_mean": 2129.3008348831627,
+            "spectral_rolloff_mean": 4533.47334428267,
+            "pitch_mean": 1400.3085310205677,
+            "rms_mean": 0.01278002467006445
+          }
+        },
+        {
+          "segment_idx": 44,
+          "time_start": 44,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -9.357246500530405,
+            "chroma_mean": 0.33055843240242144,
+            "spectral_contrast_mean": 24.99333100659841,
+            "spectral_centroid_mean": 1410.6500382082827,
+            "spectral_rolloff_mean": 2690.182217684659,
+            "pitch_mean": 859.6930828966653,
+            "rms_mean": 0.12367096543312073
+          }
+        },
+        {
+          "segment_idx": 45,
+          "time_start": 45,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -12.611048467939462,
+            "chroma_mean": 0.398597991809915,
+            "spectral_contrast_mean": 22.54073089936862,
+            "spectral_centroid_mean": 1691.5711101393351,
+            "spectral_rolloff_mean": 3385.1174094460225,
+            "pitch_mean": 1415.238942822988,
+            "rms_mean": 0.08022070676088333
+          }
+        },
+        {
+          "segment_idx": 46,
+          "time_start": 46,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -6.847572479071084,
+            "chroma_mean": 0.28554714096694883,
+            "spectral_contrast_mean": 25.033544758116626,
+            "spectral_centroid_mean": 1365.743129037162,
+            "spectral_rolloff_mean": 2608.6986194957385,
+            "pitch_mean": 680.2232863719582,
+            "rms_mean": 0.12816645205020905
+          }
+        },
+        {
+          "segment_idx": 47,
+          "time_start": 47,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -6.6698398241580525,
+            "chroma_mean": 0.3158573262495965,
+            "spectral_contrast_mean": 23.752240761420147,
+            "spectral_centroid_mean": 1405.9254484213595,
+            "spectral_rolloff_mean": 2646.3817249644885,
+            "pitch_mean": 1044.7030323419756,
+            "rms_mean": 0.11092083156108856
+          }
+        },
+        {
+          "segment_idx": 48,
+          "time_start": 48,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -5.938991227429858,
+            "chroma_mean": 0.23734887507568656,
+            "spectral_contrast_mean": 24.82841586589542,
+            "spectral_centroid_mean": 1295.8474095754957,
+            "spectral_rolloff_mean": 2722.726717862216,
+            "pitch_mean": 672.9187336030438,
+            "rms_mean": 0.15067774057388306
+          }
+        },
+        {
+          "segment_idx": 49,
+          "time_start": 49,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -7.757179169976963,
+            "chroma_mean": 0.2861875986261715,
+            "spectral_contrast_mean": 25.01334881399587,
+            "spectral_centroid_mean": 1259.906588312304,
+            "spectral_rolloff_mean": 2574.1965553977275,
+            "pitch_mean": 734.1452026531612,
+            "rms_mean": 0.13571487367153168
+          }
+        },
+        {
+          "segment_idx": 50,
+          "time_start": 50,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -12.039213949652677,
+            "chroma_mean": 0.39426884154639413,
+            "spectral_contrast_mean": 22.547762163491594,
+            "spectral_centroid_mean": 1854.0979781720644,
+            "spectral_rolloff_mean": 4051.6679243607955,
+            "pitch_mean": 951.3036442582064,
+            "rms_mean": 0.041366975754499435
+          }
+        },
+        {
+          "segment_idx": 51,
+          "time_start": 51,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -7.3581725512887965,
+            "chroma_mean": 0.2687064766306179,
+            "spectral_contrast_mean": 24.559590926793607,
+            "spectral_centroid_mean": 1380.9884641132214,
+            "spectral_rolloff_mean": 2513.0226828835225,
+            "pitch_mean": 952.5957394897,
+            "rms_mean": 0.13992364704608917
+          }
+        },
+        {
+          "segment_idx": 52,
+          "time_start": 52,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -9.689529177869915,
+            "chroma_mean": 0.2809485051573074,
+            "spectral_contrast_mean": 23.187605155600156,
+            "spectral_centroid_mean": 1633.0368970823258,
+            "spectral_rolloff_mean": 3632.7492453835225,
+            "pitch_mean": 829.8242859109295,
+            "rms_mean": 0.08621582388877869
+          }
+        },
+        {
+          "segment_idx": 53,
+          "time_start": 53,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -12.98402003014756,
+            "chroma_mean": 0.40589631964419676,
+            "spectral_contrast_mean": 22.98257311599581,
+            "spectral_centroid_mean": 2040.0302337678033,
+            "spectral_rolloff_mean": 4468.629039417614,
+            "pitch_mean": 989.9188500857776,
+            "rms_mean": 0.017948726192116737
+          }
+        },
+        {
+          "segment_idx": 54,
+          "time_start": 54,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -6.560086410002336,
+            "chroma_mean": 0.306958988725775,
+            "spectral_contrast_mean": 23.976559054886046,
+            "spectral_centroid_mean": 1270.4037621939096,
+            "spectral_rolloff_mean": 2271.997625177557,
+            "pitch_mean": 646.6035651380583,
+            "rms_mean": 0.19355200231075287
+          }
+        },
+        {
+          "segment_idx": 55,
+          "time_start": 55,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -7.909075674638839,
+            "chroma_mean": 0.29977675634798173,
+            "spectral_contrast_mean": 24.516938568952757,
+            "spectral_centroid_mean": 1349.882058685303,
+            "spectral_rolloff_mean": 2692.6291725852275,
+            "pitch_mean": 822.2152646527521,
+            "rms_mean": 0.14625518023967743
+          }
+        },
+        {
+          "segment_idx": 56,
+          "time_start": 56,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -10.729712210745193,
+            "chroma_mean": 0.3373296279365662,
+            "spectral_contrast_mean": 22.24698576227346,
+            "spectral_centroid_mean": 1803.608644691423,
+            "spectral_rolloff_mean": 3985.8448375355115,
+            "pitch_mean": 998.9838181127228,
+            "rms_mean": 0.04703527316451073
+          }
+        },
+        {
+          "segment_idx": 57,
+          "time_start": 57,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -8.740567315704924,
+            "chroma_mean": 0.3712764846872932,
+            "spectral_contrast_mean": 22.794703125875703,
+            "spectral_centroid_mean": 1428.5902486803236,
+            "spectral_rolloff_mean": 3200.8617054332385,
+            "pitch_mean": 762.4643378252392,
+            "rms_mean": 0.0891047790646553
+          }
+        },
+        {
+          "segment_idx": 58,
+          "time_start": 58,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -8.854018129489429,
+            "chroma_mean": 0.29758312243285867,
+            "spectral_contrast_mean": 25.25312778893283,
+            "spectral_centroid_mean": 1411.8234499843757,
+            "spectral_rolloff_mean": 2642.7112926136365,
+            "pitch_mean": 1049.150996350751,
+            "rms_mean": 0.16324569284915924
+          }
+        },
+        {
+          "segment_idx": 59,
+          "time_start": 59,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -9.305429777045909,
+            "chroma_mean": 0.26469709508114186,
+            "spectral_contrast_mean": 25.745616466563877,
+            "spectral_centroid_mean": 1020.8647540791786,
+            "spectral_rolloff_mean": 2158.948308771307,
+            "pitch_mean": 742.9583698939539,
+            "rms_mean": 0.1440718024969101
+          }
+        },
+        {
+          "segment_idx": 60,
+          "time_start": 60,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -9.558447188817112,
+            "chroma_mean": 0.3594726664520224,
+            "spectral_contrast_mean": 23.526657006251433,
+            "spectral_centroid_mean": 1321.203937889284,
+            "spectral_rolloff_mean": 2720.2797629616475,
+            "pitch_mean": 783.2542940278231,
+            "rms_mean": 0.10729064792394638
+          }
+        },
+        {
+          "segment_idx": 61,
+          "time_start": 61,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -8.325031936911099,
+            "chroma_mean": 0.36795044031800883,
+            "spectral_contrast_mean": 22.74122874347203,
+            "spectral_centroid_mean": 1736.9871950667873,
+            "spectral_rolloff_mean": 3488.623601740057,
+            "pitch_mean": 809.8871647731236,
+            "rms_mean": 0.09459623694419861
+          }
+        },
+        {
+          "segment_idx": 62,
+          "time_start": 62,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -12.676802056996506,
+            "chroma_mean": 0.4713660616056574,
+            "spectral_contrast_mean": 22.560791151048416,
+            "spectral_centroid_mean": 2028.7652502163548,
+            "spectral_rolloff_mean": 4394.975696910511,
+            "pitch_mean": 893.6192862049076,
+            "rms_mean": 0.014501014724373817
+          }
+        },
+        {
+          "segment_idx": 63,
+          "time_start": 63,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -9.448335785899625,
+            "chroma_mean": 0.3509528002396585,
+            "spectral_contrast_mean": 24.83875025272231,
+            "spectral_centroid_mean": 1179.5860345871245,
+            "spectral_rolloff_mean": 2269.7953657670455,
+            "pitch_mean": 811.6148442911218,
+            "rms_mean": 0.1474839448928833
+          }
+        },
+        {
+          "segment_idx": 64,
+          "time_start": 64,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -10.432939006085972,
+            "chroma_mean": 0.3476002716707823,
+            "spectral_contrast_mean": 23.776905337292295,
+            "spectral_centroid_mean": 1163.3773689131435,
+            "spectral_rolloff_mean": 2464.5729758522725,
+            "pitch_mean": 701.7544858139403,
+            "rms_mean": 0.15854999423027039
+          }
+        },
+        {
+          "segment_idx": 65,
+          "time_start": 65,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -9.381906008702012,
+            "chroma_mean": 0.3367867391172199,
+            "spectral_contrast_mean": 23.001520500024945,
+            "spectral_centroid_mean": 1564.2378209219291,
+            "spectral_rolloff_mean": 3389.7666237571025,
+            "pitch_mean": 736.9754623506482,
+            "rms_mean": 0.07815766334533691
+          }
+        },
+        {
+          "segment_idx": 66,
+          "time_start": 66,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -9.734991915022263,
+            "chroma_mean": 0.2855778389639485,
+            "spectral_contrast_mean": 24.914603963591382,
+            "spectral_centroid_mean": 1054.1226783139705,
+            "spectral_rolloff_mean": 2108.0516468394885,
+            "pitch_mean": 771.5964625786842,
+            "rms_mean": 0.10555307567119598
+          }
+        },
+        {
+          "segment_idx": 67,
+          "time_start": 67,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -12.097476597599664,
+            "chroma_mean": 0.4384910081667921,
+            "spectral_contrast_mean": 23.02951921876871,
+            "spectral_centroid_mean": 2390.351535881242,
+            "spectral_rolloff_mean": 4476.214599609375,
+            "pitch_mean": 1376.9604160286651,
+            "rms_mean": 0.023612217977643013
+          }
+        },
+        {
+          "segment_idx": 68,
+          "time_start": 68,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -9.553617605547865,
+            "chroma_mean": 0.3626118595881079,
+            "spectral_contrast_mean": 22.524741761396076,
+            "spectral_centroid_mean": 1819.5860159623765,
+            "spectral_rolloff_mean": 3903.6271528764205,
+            "pitch_mean": 1135.4177133156882,
+            "rms_mean": 0.04793090000748634
+          }
+        },
+        {
+          "segment_idx": 69,
+          "time_start": 69,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -10.86656227503478,
+            "chroma_mean": 0.3201055818012992,
+            "spectral_contrast_mean": 24.487556683322875,
+            "spectral_centroid_mean": 1226.6266911152507,
+            "spectral_rolloff_mean": 2672.564142400568,
+            "pitch_mean": 846.9517374460851,
+            "rms_mean": 0.10482577979564667
+          }
+        },
+        {
+          "segment_idx": 70,
+          "time_start": 70,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -9.98254605917389,
+            "chroma_mean": 0.3199042724761947,
+            "spectral_contrast_mean": 24.74065071841688,
+            "spectral_centroid_mean": 1677.0923390602109,
+            "spectral_rolloff_mean": 3129.9000133167615,
+            "pitch_mean": 1086.6015345722924,
+            "rms_mean": 0.10485663264989853
+          }
+        },
+        {
+          "segment_idx": 71,
+          "time_start": 71,
+          "tone": "Neutral",
+          "features": {
+            "mfcc_mean": -14.001646736078655,
+            "chroma_mean": 0.4158774246571057,
+            "spectral_contrast_mean": 23.016031698922507,
+            "spectral_centroid_mean": 2063.2973207686346,
+            "spectral_rolloff_mean": 4312.513316761364,
+            "pitch_mean": 1507.0452355672046,
+            "rms_mean": 0.015963690355420113
+          }
+        }
+      ]
+    }
+  }
